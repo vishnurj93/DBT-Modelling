@@ -1,8 +1,10 @@
 import snowflake.connector as snow
-def connection_builder(warehouse, first_time_connection = True, database = "RAW", schema = "GLOBALMART"):
+def connection_builder(first_time_connection = True, schema = "Analtyics"):
     username = "vishnurajalingam"
     password = "Sanguine@93"
+    database = "Store"
     account = "fq92599.canada-central.azure"
+    warehouse = "COMPUTE_WH"
 
     if(first_time_connection):
         conn = snow.connect(
